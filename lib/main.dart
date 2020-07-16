@@ -61,12 +61,91 @@ class _UserAuthState extends State<UserAuth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-         child: Center(
-           child:Text(
-             "Text"
-           )
-         ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/books.png"),
+                  ),
+                ),
+                height: MediaQuery.of(context).size.height*0.4,
+                width: MediaQuery.of(context).size.width,
+              ),
+
+              SizedBox(
+                height: 20,
+              ),
+
+              SizedBox(
+                width: MediaQuery.of(context).size.width*0.8,
+                height: 55,
+                child: RaisedButton(
+                  onPressed: () {
+                    
+                  },
+                  color: Colors.green[300],
+                  child: Text(
+                    "Sign In ",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  shape: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(
+                      color: Colors.green[400],
+                    )
+                  ),
+                ),
+              ),
+
+              SizedBox(
+                height: 30,
+              ),
+
+              SizedBox(
+                width: MediaQuery.of(context).size.width*0.8,
+                height: 55,
+                child: RaisedButton(
+                  onPressed: () {
+                    
+                  },
+                  color: Colors.green[300],
+                  child: Text(
+                    "Sign up ",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  shape: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(
+                      color: Colors.green[400],
+                    )
+                  ),
+                ),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/book.png"),
+                  ),
+                ),
+                height: MediaQuery.of(context).size.height*0.3,
+                width: MediaQuery.of(context).size.width,
+              ),
+            ],
+          ),
+        )
       ),
     );
   }

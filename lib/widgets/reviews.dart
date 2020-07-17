@@ -9,46 +9,49 @@ class Reviews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10,
-      child: Row(
-        children: [
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        elevation: 10,
+        child: Row(
+          children: [
 
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 250,
-                  child: Text(
-                    "$review",
-                    softWrap: true,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: 250,
+                    child: Text(
+                      "$review",
+                      softWrap: true,
+                    ),
                   ),
                 ),
-              ),
 
-              GestureDetector(
-                child: Text(
-                  "Read more"
+                GestureDetector(
+                  child: Text(
+                    "Read more"
+                  ),
                 ),
-              ),
 
-              Stars
-            ],
-          ),
-
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(imagePath),
-                fit: BoxFit.fitHeight
-              )
+                Stars
+              ],
             ),
-            height: 200,
-            width: 100,
-          )
-        ]
+
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.fitHeight
+                )
+              ),
+              height: 200,
+              width: 100,
+            )
+          ]
+        ),
       ),
     );
   }

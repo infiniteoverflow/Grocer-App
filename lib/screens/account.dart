@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocer_app/widgets/ui_helper.dart';
 
 class AccountDetails extends StatefulWidget {
   @override
@@ -93,7 +94,7 @@ class _AccountDetailsState extends State<AccountDetails> {
                         Column(
                           children: [
                             Text(
-                              "25",
+                              "4",
                               style:TextStyle(
                                 fontSize: 25,
                                 color: Colors.grey
@@ -179,6 +180,50 @@ class _AccountDetailsState extends State<AccountDetails> {
               ),
             ]
           ),
+
+          SizedBox(
+            height: 30,
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Your Purchases (4)",
+              style: TextStyle(
+                fontSize: 25,
+              ),
+            ),
+          ),
+
+          Container(
+            height: 350,
+            child: ListView(
+              scrollDirection: Axis.horizontal, 
+              children: OurTopPicks
+            ),
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Your reviews (5)",
+              style: TextStyle(
+                fontSize: 25,
+              ),
+            ),
+          ),
+
+          Container(
+            height: 200,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: ReviewList,
+            ),
+          )
           
         ]
       ),

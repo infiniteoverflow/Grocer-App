@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocer_app/widgets/recentlyViewedCard.dart';
+import 'package:grocer_app/widgets/reviews.dart';
 
 import 'bestSellerCard.dart';
 import 'ourTopPicksCard.dart';
@@ -31,4 +32,18 @@ List<RecentlyViewedCard> RecentlyViewedBook = [
       "Day Four"),
   RecentlyViewedCard("assets/images/books/book_d2d.png", "Edward Humes",
       "Door to Door"),
+];
+
+List<Reviews> ReviewList = [
+  Reviews(
+    imagePath: "assets/images/books/book_tree.png",
+    review: "An outstanding book which is situated beyond the present time",
+    stars: "5"
+  ),
+
+  Reviews(
+    imagePath: "assets/images/books/book_fatherhood.png",
+    review: "An outstanding book which describes about fatherhood",
+    stars: "5"
+  ),
 ];

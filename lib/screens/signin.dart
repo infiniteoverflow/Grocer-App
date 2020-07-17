@@ -10,6 +10,7 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
 
   bool isChecked = true;
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -43,10 +44,30 @@ class _SignInState extends State<SignIn> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none
                       ),
                       filled: true,
                       fillColor: Colors.red[150],
-                      labelText: "Optional Group Special Code"
+                      labelText: "Optional Group Special Code",
+                      floatingLabelBehavior: FloatingLabelBehavior.never
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide.none
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      labelText: "Email Address",
+                      floatingLabelBehavior: FloatingLabelBehavior.never
                     ),
                   ),
                 ),
@@ -59,27 +80,22 @@ class _SignInState extends State<SignIn> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.remove_red_eye,color: Colors.grey,),
+                        onPressed: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
                       ),
                       filled: true,
                       fillColor: Colors.grey[150],
-                      labelText: "Email Address"
+                      labelText: "Password",
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
                     ),
-                  ),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      filled: true,
-                      fillColor: Colors.grey[150],
-                      labelText: "Password"
-                    ),
+                    obscureText: _obscureText,
                   ),
                 ),
               ),

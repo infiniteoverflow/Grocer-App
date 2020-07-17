@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocer_app/screens/searchScreen.dart';
-import 'package:grocer_app/widgets/app_drawer.dart';
-import 'package:grocer_app/widgets/main_content.dart';
+import 'package:grocer_app/widgets/appDrawer.dart';
+import 'package:grocer_app/widgets/mainContent.dart';
 
 var _scaffoldKey = GlobalKey<ScaffoldState>();
 

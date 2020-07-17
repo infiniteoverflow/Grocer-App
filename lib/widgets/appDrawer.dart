@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocer_app/screens/account.dart';
 
 class AppDrawer extends StatefulWidget {
   @override
@@ -145,24 +146,32 @@ class _AppDrawerState extends State<AppDrawer> {
                 ),
               ),
 
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right:15.0),
-                      child: Text(
-                        "Account",
-                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+              GestureDetector(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right:15.0),
+                        child: Text(
+                          "Account",
+                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.person,
-                      color: Color(0xFF5ABD8C),
-                    ),
-                  ],
+                      Icon(
+                        Icons.person,
+                        color: Color(0xFF5ABD8C),
+                      ),
+                    ],
+                  ),
                 ),
+
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(
+                    builder: (context) => AccountDetails(),
+                  ));
+                },
               ),
 
 

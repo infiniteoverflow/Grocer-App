@@ -3,7 +3,7 @@ import 'package:grocer_app/widgets/ui_helper.dart';
 
 class MainContent extends StatelessWidget {
 
-  var _scaffoldKey;
+  final _scaffoldKey;
   MainContent(this._scaffoldKey);
 
   @override
@@ -11,23 +11,50 @@ class MainContent extends StatelessWidget {
     return ListView(
       scrollDirection: Axis.vertical,
       children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
+        Stack(
           children: [
-            TopPicks,
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                _scaffoldKey.currentState.openEndDrawer();
-              },
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(150),
+                  bottomRight: Radius.circular(150)
+                ),
+                color: Color(0xFF5ABD8C)
+              ),
+              height: 450,
+              width: MediaQuery.of(context).size.width,
+            ),
+
+            Positioned(
+              top: 30,
+              right: 0,
+              left: 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  TopPicks,
+                  IconButton(
+                    icon: Icon(Icons.menu),
+                    onPressed: () {
+                      _scaffoldKey.currentState.openEndDrawer();
+                    },
+                  ),
+                ],
+              ),
+            ),
+
+            Positioned(
+              left: 0,
+              top: 100,
+              child: Container(
+                height: 350.0,
+                width: MediaQuery.of(context).size.width,
+                child:
+                    ListView(scrollDirection: Axis.horizontal, children: OurTopPicks),
+              ),
             ),
           ],
-        ),
-        Container(
-          height: 350.0,
-          child:
-              ListView(scrollDirection: Axis.horizontal, children: OurTopPicks),
         ),
         TextBestSellers,
         Container(

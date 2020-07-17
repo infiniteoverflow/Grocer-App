@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_screen/flutteronboardingscreens.dart';
 import 'package:flutter_onboarding_screen/OnbordingData.dart';
 import 'package:grocer_app/screens/signin.dart';
+import 'package:grocer_app/screens/signup.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -117,7 +118,9 @@ class _UserAuthState extends State<UserAuth> {
                 height: 55,
                 child: RaisedButton(
                   onPressed: () {
-                    
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => SignUp(),
+                    ));
                   },
                   color: Colors.green[300],
                   child: Text(

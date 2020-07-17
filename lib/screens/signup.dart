@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
-  SignIn({Key key}) : super(key: key);
-
+class SignUp extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
-
-  bool isChecked = true;
+class _SignUpState extends State<SignUp> {
+  bool isChecked = false;
   bool _obscureText = true;
 
   @override
@@ -35,7 +32,7 @@ class _SignInState extends State<SignIn> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "Sign In",
+                  "Sign Up",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold
@@ -54,7 +51,7 @@ class _SignInState extends State<SignIn> {
                       ),
                       filled: true,
                       fillColor: Colors.red[150],
-                      labelText: "Optional Group Special Code",
+                      labelText: "First and Last Name",
                       floatingLabelBehavior: FloatingLabelBehavior.never
                     ),
                   ),
@@ -72,7 +69,43 @@ class _SignInState extends State<SignIn> {
                       ),
                       filled: true,
                       fillColor: Colors.grey[100],
-                      labelText: "Email Address",
+                      labelText: "Email",
+                      floatingLabelBehavior: FloatingLabelBehavior.never
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide.none
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      labelText: "Mobile Phone",
+                      floatingLabelBehavior: FloatingLabelBehavior.never
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide.none
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      labelText: "Group Special Code (optional)",
                       floatingLabelBehavior: FloatingLabelBehavior.never
                     ),
                   ),
@@ -126,20 +159,12 @@ class _SignInState extends State<SignIn> {
                       Padding(
                         padding: const EdgeInsets.only(left:6.0),
                         child: Text(
-                          "Stay Logged In"
+                          "Please Sign me up for latest newsletters"
                         ),
                       )
                     ],
                   ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(right:8.0),
-                    child: GestureDetector(
-                      child: Text(
-                        "Forgot your password?"
-                      ),
-                    ),
-                  )
                 ],
               ),
 

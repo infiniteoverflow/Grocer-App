@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocer_app/screens/homepage.dart';
 
 class SignIn extends StatefulWidget {
   SignIn({Key key}) : super(key: key);
@@ -150,7 +151,9 @@ class _SignInState extends State<SignIn> {
                   width: MediaQuery.of(context).size.width*0.9,
                   child: RaisedButton(
                     onPressed: () {
-                      
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => HomePage(),
+                      ));
                     },
                     color: Colors.white,
                     shape: OutlineInputBorder(

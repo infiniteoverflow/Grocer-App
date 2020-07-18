@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedPage = 0;
   final _pageOptions = [
     MainContent(_scaffoldKey),
-    SearchScreen(),
+    SearchPage(),
     // WishlistScreen(),
     // Cart()
   ];

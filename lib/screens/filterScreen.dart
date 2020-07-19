@@ -52,12 +52,17 @@ class _FilterScreenState extends State<FilterScreen> {
 
                Padding(
                  padding: const EdgeInsets.all(8.0),
-                 child: Text(
-                   "Cancel",
-                   style: TextStyle(
-                     fontSize: 20,
-                     fontWeight: FontWeight.bold,
-                     color: Colors.grey
+                 child: GestureDetector(
+                   onTap: () {
+                     Navigator.pop(context);
+                   },
+                   child: Text(
+                     "Cancel",
+                     style: TextStyle(
+                       fontSize: 20,
+                       fontWeight: FontWeight.bold,
+                       color: Colors.grey
+                     ),
                    ),
                  ),
                ),

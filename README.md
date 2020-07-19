@@ -5,23 +5,15 @@ UI Idea : https://www.behance.net/gallery/83678145/Book-Grocer-App-Design-Free-B
 
 # Screenshots
 
-<table style="{border:none}">
+Onboarding 1               |  Onboarding 2               | Onboarding 3           |  Forgot Password Page
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%201.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%202.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%203.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/userauth.png?raw=true)|
 
-<tr>
-    <td>
-        <p style="text-align:center;">Onboarding 1</p>
-    </td>
-    <td>
-        <p style="text-align:center;">Onboarding 2</p>
-    </td>
-</tr>
+Sign Up               |  Sign In              | Homepage           |  Homepage
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/signin.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/signup.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/homepage%201.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/homepage%202.png?raw=true)|
 
-<tr>
-    <td>
-        <img src="./screenshots/onboarding 1.png" width="300"/>
-    </td>
-    <td>
-        <img src="./screenshots/onboarding 2.png" width="300"/>
-    </td>
-</tr>
-</table>
+
+App Drawer               |  Homepage             | Searchpage           |  Filterpage
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/appdrawer.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/homepage%203.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/search.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/filter.png?raw=true)|

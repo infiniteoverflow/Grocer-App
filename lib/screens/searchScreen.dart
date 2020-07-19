@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:grocer_app/screens/filterScreen.dart';
 
+int selectedTopic = 0;
+
+
 class SearchPage extends StatefulWidget {
 
   _SearchPageState createState() => _SearchPageState();
@@ -10,8 +13,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
 
   final List<Widget> body = [
-    textBody(),
-    suggestion(),
+    
   ];
 
   int bodyIndex = 0;
@@ -24,6 +26,21 @@ class _SearchPageState extends State<SearchPage> {
     "Search 3"
   ];
 
+  List topics = [
+    "Genres",
+    "New Arrivals",
+    "The Arts"
+  ];
+
+  List gridElems = [
+    ['assets/images/search/Biography.jpg',Colors.pink[700],"Biography"],
+    ['assets/images/search/Business.jpg',Colors.yellow[700],"Business"],
+    ['assets/images/search/Children.jpg',Colors.orange[300],"Children"],
+    ['assets/images/search/Cookery.jpg',Colors.red[700],"Cookery"],
+    ['assets/images/search/Fiction.jpg',Colors.blue[300],"Fiction"],
+    ['assets/images/search/Graphic Novels.jpg',Colors.brown[700],"Graphic Novels"],
+  ];
+
   Icon actionIcon = Icon(Icons.tune);
   FocusNode myFocusNode;
   bool initialTap = false;
@@ -32,13 +49,114 @@ class _SearchPageState extends State<SearchPage> {
   void initState() { 
     super.initState();
     myFocusNode = FocusNode();
+    body.add(topicSuggestion());
+    body.add(suggestionsSearchView());
   }
 
-  static textBody() {
-    return Center(child: Text("Hello"));
+  Widget topicSuggestion() {
+    return Column(
+      children: [
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              _scrollWidget(0, "Genres"),
+              _scrollWidget(1, "New Arrivals"),
+              _scrollWidget(2, "The Art")
+            ],
+          ),
+        ),
+
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GridView.builder(
+              itemCount: gridElems.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.7,
+                mainAxisSpacing: 15,
+                crossAxisSpacing: 15
+              ),
+              itemBuilder: (context, index){
+                return gridWidget(gridElems[index][0], gridElems[index][1],gridElems[index][2]);
+              },
+            ),
+          ),
+        )
+      ],
+    );
   }
 
-  static suggestion() {
+  Widget gridWidget(String imgPath,Color color,String text) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(10)
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+
+          Padding(padding: EdgeInsets.all(10),),
+
+          Expanded(
+            child: Container(
+              height: 120,
+              width: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage(imgPath),
+                  fit: BoxFit.fill
+                )
+              ),
+              
+            ),
+          ),
+
+
+        ],
+      )
+    );
+  }
+
+  Widget _scrollWidget(int index,String topic) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            selectCard(index);
+          });
+        },
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 500),        
+          child: Text(
+            topic,
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: selectedTopic == index? Colors.black : Colors.grey
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  Widget suggestionsSearchView() {
     return ListView.builder(
       itemCount: suggestions.length,
       itemBuilder: (context, index) => SizedBox(
@@ -153,6 +271,7 @@ class _SearchPageState extends State<SearchPage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    print(selectedTopic);
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -165,5 +284,11 @@ class _SearchPageState extends State<SearchPage> {
         ),
       )
     );
+  }
+
+  void selectCard(int index) {
+    setState(() {
+      selectedTopic = index;
+    });
   }
 }

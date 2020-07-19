@@ -9,10 +9,10 @@ UI Idea : https://www.behance.net/gallery/83678145/Book-Grocer-App-Design-Free-B
 
 <tr>
     <td>
-        Onboarding 1
+        <p style="text-align:center;">Onboarding 1</p>
     </td>
     <td>
-        Onboarding 2
+        <p style="text-align:center;">Onboarding 2</p>
     </td>
 </tr>
 

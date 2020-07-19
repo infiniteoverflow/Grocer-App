@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:grocer_app/screens/searchScreen.dart';
+import 'package:grocer_app/screens/wishlist.dart';
 import 'package:grocer_app/widgets/appDrawer.dart';
 import 'package:grocer_app/widgets/mainContent.dart';
+
+import 'cart.dart';
 
 var _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -16,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   final _pageOptions = [
     MainContent(_scaffoldKey),
     SearchPage(),
-    // WishlistScreen(),
-    // Cart()
+    WishList(),
+    Cart()
   ];
 
   @override
@@ -52,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                 title: Text('Wishlist')),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart, color: Color(0x50FFFFFF)),
-                title: Text('Home'))
+                title: Text('Cart'))
           ],
         ),
       ),

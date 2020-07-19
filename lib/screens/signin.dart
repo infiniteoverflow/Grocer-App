@@ -24,6 +24,25 @@ class _SignInState extends State<SignIn> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => HomePage(),
+              ));
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:20.0),
+              child: Text(
+                "Skip",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 22
+                ),
+              ),
+            ),
+          )
+        ],
         backgroundColor: Colors.white,
         elevation: 0,
       ),
@@ -151,9 +170,7 @@ class _SignInState extends State<SignIn> {
                   width: MediaQuery.of(context).size.width*0.9,
                   child: RaisedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => HomePage(),
-                      ));
+                      
                     },
                     color: Colors.white,
                     shape: OutlineInputBorder(

@@ -5,7 +5,7 @@ UI Idea : https://www.behance.net/gallery/83678145/Book-Grocer-App-Design-Free-B
 
 # Screenshots
 
-Onboarding 1               |  Onboarding 2               | Onboarding 3           |  Forgot Password Page
+Onboarding 1               |  Onboarding 2               | Onboarding 3           |  User Authentication Page
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%201.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%202.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/onboarding%203.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/userauth.png?raw=true)|
 

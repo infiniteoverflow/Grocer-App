@@ -17,3 +17,6 @@ Sign Up               |  Sign In              | Homepage           |  Homepage
 App Drawer               |  Homepage             | Searchpage           |  Filterpage
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/appdrawer.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/homepage%203.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/search.png?raw=true)|![](https://github.com/infiniteoverflow/Grocer-App/blob/master/screenshots/filter.png?raw=true)|
+
+
+## Added CI/CD 
